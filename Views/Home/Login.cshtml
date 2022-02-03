@@ -1,0 +1,26 @@
+@model PROJET_FIN.Models.User;
+@{
+    ViewData["Title"] = "Connection";
+}
+<div class=" h2 text-danger">@ViewBag.message</div>
+<div class=" h3 text-danger">@ViewBag.message3</div>
+
+
+<h2>Connectez-vous</h2>
+<form method="post"> 
+
+<input asp-for ="Email" type="text" placeholder="Courriel" name="Email" size="27" /><br/>
+<span asp-validation-for="Email" class="text-danger"></span><br/>
+<input asp-for ="Password" type="password" placeholder="Mot De Passe" size="27" /><br/>
+<span asp-validation-for="Password" class="text-danger"></span><br/>
+<button type="submit" class="btn btn-primary">Vous Connecter</button>
+<span> - ou - </span>
+<span>
+   <a href="/Home/Register" class="btn btn-success">S'inscrire</a>
+</span>
+
+</form>
+
+
+
+
